@@ -1,0 +1,22 @@
+Index: test/Makefile.am
+===================================================================
+--- test/Makefile.am	(revision 5162)
++++ test/Makefile.am	(revision 5163)
+@@ -1,3 +1,5 @@
++AM_CFLAGS = -I$(top_srcdir)
++
+ check_SCRIPTS=run-test.sh
+ TESTS_ENVIRONMENT=src=${srcdir} EXEEXT=${EXEEXT} sh
+ TESTS=run-test.sh
+Index: test/Makefile.in
+===================================================================
+--- test/Makefile.in	(revision 5162)
++++ test/Makefile.in	(revision 5163)
+@@ -280,6 +280,7 @@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ xmldir = @xmldir@
++AM_CFLAGS = -I$(top_srcdir)
+ check_SCRIPTS = run-test.sh
+ TESTS_ENVIRONMENT = src=${srcdir} EXEEXT=${EXEEXT} sh
+ TESTS = run-test.sh
