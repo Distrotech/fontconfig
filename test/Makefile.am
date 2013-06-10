@@ -1,3 +1,5 @@
+AM_CFLAGS = -I$(top_srcdir)
+
 check_SCRIPTS=run-test.sh
 TEST_EXTENSIONS = \
 	.sh \
